@@ -1,0 +1,274 @@
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Segoe UI",sans-serif;
+}
+
+/* 🌊 BLUE DARK THEME */
+body{
+  background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  color:#fff;
+  height:100vh;
+}
+
+/* ================= HOME ================= */
+
+.container{
+  display:flex;
+  height:100vh;
+}
+
+/* LEFT */
+.left{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:80px;
+}
+
+.left h1{
+  font-size:175px;   /* 🔥 bigger */
+  font-weight:800;
+}
+
+.tagline{
+  margin-top:20px;
+  font-size:35px;   /* 🔥 bigger */
+  opacity:0.85;
+}
+
+/* RIGHT CARD */
+.card{
+  flex:1;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.home-box{
+  width:70%;
+  padding:80px;
+  border-radius:60px;
+
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(20px);
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:30px;
+}
+
+/* HEADING */
+.heading{
+  font-size:28px;
+  margin-bottom:10px; /* gap between text & emojis */
+}
+
+/* MOODS */
+.moods{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:25px;
+}
+
+.moods div{
+  padding:30px;
+  text-align:center;
+  border-radius:20px;
+  cursor:pointer;
+
+  background: rgba(255,255,255,0.1);
+
+  font-size:40px;
+  transition:0.3s;
+}
+
+.moods div:hover{
+  transform:scale(1.05);
+  background: rgba(255,255,255,0.2);
+}
+
+.moods span{
+  display:block;
+  margin-top:10px;
+  font-size:16px;
+}
+
+/* INPUT */
+input{
+  width:80%;
+  padding:14px;
+  border:none;
+  border-radius:30px;
+  background: rgba(255,255,255,0.1);
+  color:#fff;
+  text-align:center;
+}
+
+input::placeholder{
+  color: rgba(255,255,255,0.6);
+}
+
+/* BUTTON */
+button{
+  padding:12px 40px;
+  border:none;
+  border-radius:30px;
+  background: linear-gradient(135deg,#00c6ff,#0072ff);
+  color:#fff;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+button:hover{
+  transform:scale(1.05);
+}
+
+/* ================= PLAYLIST ================= */
+
+.top{
+  display:flex;
+  align-items:center;
+  gap:20px;
+  padding:20px;
+}
+
+.top button{
+  background:none;
+  color:#fff;
+  font-size:20px;
+}
+
+/* BIG TITLE */
+.big-title{
+  font-size:36px;
+  font-weight:700;
+}
+
+/* PLAY BUTTON */
+.playAll{
+  margin:20px;
+}
+
+/* SONG LIST */
+#songs{
+  padding:20px;
+}
+
+.song{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px;
+  margin-bottom:15px;
+  border-radius:20px;
+
+  background: rgba(255,255,255,0.05); /* darker */
+  border:1px solid rgba(255,255,255,0.08);
+
+  transition:0.2s;
+}
+
+.song:hover{
+  transform:scale(1.02);
+}
+
+/* SONG LEFT */
+.song-left{
+  display:flex;
+  gap:15px;
+  align-items:center;
+}
+
+.song-left img{
+  width:65px;
+  height:65px;
+  border-radius:12px;
+}
+
+.song span{
+  cursor:pointer;
+}
+
+/* ================= PLAYER ================= */
+
+.player{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  gap:100px;
+}
+
+/* DISC */
+.disc img{
+  width:450px;
+  height:450px;
+  border-radius:50%;
+  object-fit:cover;
+  animation:spin 8s linear infinite;
+}
+
+/* DETAILS */
+.details{
+  display:flex;
+  flex-direction:column;
+  gap:25px;
+}
+
+/* TEXT */
+.song-title{
+  font-size:50px;  /* 🔥 bigger */
+  font-weight:700;
+}
+
+.artist-name{
+  font-size:30px;  /* 🔥 bigger */
+  opacity:0.7;
+}
+
+/* PROGRESS */
+#progress{
+  width:350px;
+}
+
+/* VOLUME */
+#volume{
+  width:150px;
+  accent-color:#00c6ff;
+}
+
+/* CONTROLS */
+.controls{
+  display:flex;
+  gap:25px;
+  padding:20px;
+  border-radius:40px;
+  background: rgba(255,255,255,0.07);
+}
+
+.controls button{
+  width:70px;
+  height:70px;
+  border-radius:50%;
+  font-size:22px;
+}
+
+/* BACK BUTTON */
+.back{
+  position:absolute;
+  top:20px;
+  left:20px;
+  background:none;
+  font-size:22px;
+}
+
+/* SPIN ANIMATION */
+@keyframes spin{
+  from{transform:rotate(0)}
+  to{transform:rotate(360deg)}
+}

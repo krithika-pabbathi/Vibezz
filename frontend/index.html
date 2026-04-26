@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vibezz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <div class="left">
+    <h1>Vibezz</h1>
+    <p class="tagline">Your mood, your music</p>
+  </div>
+
+  <div class="card">
+    <div class="home-box">
+
+      <h2 class="heading">How are you feeling?</h2>
+
+      <div class="moods">
+        <div onclick="selectMood('happy')">✨<span>Happy</span></div>
+        <div onclick="selectMood('sad')">🌧<span>Sad</span></div>
+        <div onclick="selectMood('angry')">🔥<span>Angry</span></div>
+        <div onclick="selectMood('chill')">🍃<span>Chill</span></div>
+      </div>
+
+      <input id="textInput" placeholder="Type your mood...">
+
+      <!-- ✅ SEND BUTTON ADDED -->
+      <button onclick="detectMood()">Send</button>
+
+    </div>
+  </div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
